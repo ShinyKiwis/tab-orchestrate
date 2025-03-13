@@ -1,0 +1,36 @@
+{
+  "name": "Tab Orchestrate",
+  "description": "Grouping your tabs and search them easily",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["tabs", "tabGroups", "scripting"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "group_tabs": {
+      "suggested_key": {
+        "default": "Alt+G",
+        "mac": "Alt+G"
+      },
+      "description": "Group your tabs by domain or subdomain"
+    },
+    "ungroup_tabs": {
+      "suggested_key": {
+        "default": "Alt+U",
+        "mac": "Alt+U"
+      },
+      "description": "Ungroup all your tabs"
+    },
+    "search_tabs": {
+      "suggested_key": {
+        "default": "Alt+K",
+        "mac": "Alt+K"
+      },
+      "description": "Search your tabs by title or URL"
+    }
+  }
+}
