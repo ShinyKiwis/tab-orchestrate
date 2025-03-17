@@ -11,7 +11,8 @@ async function searchTabs(term = "") {
 
   if (term) {
     filteredTabs = filteredTabs.filter((tab) =>
-      tab.title.toLowerCase().includes(term.toLowerCase())
+      tab.title.toLowerCase().includes(term.toLowerCase()) ||
+      tab.url.toLowerCase().includes(term.toLowerCase())
     );
   }
 
